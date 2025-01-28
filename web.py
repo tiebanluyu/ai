@@ -9,7 +9,7 @@ messages=[{"role":"system","content":prompt}]
 content=open("content.txt","r").read()
 messages.append( {"role":"user","content":content})
 messages.append( {"role":"user","content":search(content)})
-print(messages)
+#print(messages)
 
 while 1:
     stream = ollama.chat(model='deepseek-r1:1.5b', messages=messages,stream=True)
